@@ -1,0 +1,133 @@
+/* simple reset */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+main {
+  min-height: calc(100vh - 190px); /* Adjust '200px' to your header+footer height */
+}
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:1rem;
+}
+.site-header{
+  background:#222;
+  color:#fff;
+  padding:.6rem 0;
+}
+.brand{
+  display:inline-block;
+  margin-right:1rem;
+  font-size:1.2rem;
+}
+.nav{float:right;}
+.nav a, .nav .btn{
+  color:#fff;
+  margin-left:0.8rem;
+  text-decoration:none;
+}
+.btn{
+  background:#0070f3;
+  border:none;
+  padding:.5rem .8rem;
+  border-radius:6px;
+  color:#fff;
+  cursor:pointer;
+  text-decoration: none;
+}
+.hero{padding:2rem 0;}
+.hero-inner{
+  padding-top: 2rem;
+}
+.card{
+  background:#f8f8f8;
+  padding:1rem;
+  margin:1rem 0;
+  border-radius:8px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+table th, table td{
+  padding:.6rem;
+  border-bottom:1px solid #ddd;
+  text-align:left;
+}
+.contact-header{
+  text-align: center;
+  /* padding-bottom: 2rem; */
+  padding: 2rem 0rem;
+}
+.message-header{
+  text-align: center;
+  padding: 2rem 0rem;
+}
+.site-footer{
+  background:#111;
+  color:#bbb;
+  padding:1rem 0;
+  margin-top:2rem;
+  text-align:center;
+}
+.map-wrap iframe{
+  width:100%;
+  border:0;
+  height:300px;
+}
+
+/* modal */
+.modal{
+  position: fixed;         /* stays on top of everything */
+  top: 0;
+  left: 0;
+  width: 100%;             /* full width */
+  height: 100%;            /* full height */
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent overlay */
+  display:none;           /* hidden by default */
+  align-items: center;
+  justify-content: center;
+}
+.modal[aria-hidden="false"]{display:flex;}
+.modal-content{background:#fff;
+  padding:1rem;
+  border-radius:8px;
+  max-width:420px;
+  width:100%;
+  position:relative;
+}
+.modal-close{position:absolute;
+  right:.4rem;
+  top:.2rem;
+  border:none;
+  background:transparent;font-size:1.4rem;
+  cursor:pointer;
+}
+label{display:block;
+  margin:.6rem 0;
+}
+input,select,textarea{width:100%;
+  padding:.5rem;
+  margin-top:.3rem;
+  border:1px solid #ccc;
+  border-radius:4px;
+}
+.small{font-size:.8rem;
+  color:#666;
+  margin-top:.5rem;
+}
+
+/* responsive */
+@media (max-width:640px){
+  .nav{float:none;
+    margin-top:.6rem;
+  }
+  .brand{display:block;}
+}

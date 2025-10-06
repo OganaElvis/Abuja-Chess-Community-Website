@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abuja Chess Community | Play & Learn Chess in Abuja</title>
+  <meta name="description" content="Join the Abuja Chess Community — weekly meetups, location, opening hours, and how to join. Players of all levels welcome." />
+  <link rel="canonical" href="https://example.com/" />
+  <meta property="og:title" content="Abuja Chess Community" />
+  <meta property="og:description" content="Weekly meetups in Abuja — find location, hours and join us." />
+  <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SportsActivityLocation",
+    "name":"Abuja Chess Community",
+    "description":"Friendly chess club in Abuja. Weekly meetups for all skill levels.",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Model Secondary School Maitama",
+      "addressLocality":"Abuja",
+      "addressRegion":"FCT",
+      "postalCode":"900271",
+      "addressCountry":"NG"
+    },
+    "telephone":"+234-9158875603",
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"17:00","closes":"21:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"14:00","closes":"19:00"}
+    ],
+    "geo":{"@type":"GeoCoordinates","latitude":"9.088088597774812","longitude":"7.4997437966040215"},
+    "url":"https://example.com"
+  }
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Abuja Chess Community</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <button id="join-btn" class="btn">Join Us</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Play & Learn Chess in Abuja</h2>
+      <p>Weekly meetups for players of all levels. Friendly atmosphere, casual games, and occasional tournaments.</p>
+      <div class="hero-inner">
+        <a href="#hours" class="btn">See Opening Hours</a>
+        <button id="join-cta" class="btn">Join Us</button>
+      </div>
+    </section>
+
+    <section id="location" class="card">
+      <h3>Location</h3>
+      <p>61 Lake Chad Crescent, Off IBB Way, Maitama, Abuja.</p>
+      <!-- Replace src with your Google Maps embed code (Google Maps → Share → Embed a map) -->
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1969.8649367165287!2d7.4992324!3d9.0883543!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0a41c6d85efd%3A0x8d4e6b3a97fdb4c6!2sModel%20Secondary%20School%20Maitama!5e0!3m2!1sen!2sng!4v1757360194661!5m2!1sen!2sng" 
+          width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <section id="hours" class="card">
+      <h3>Weekly Opening Hours</h3>
+      <table>
+        <thead><tr><th>Day</th><th>Hours</th></tr></thead>
+        <tbody>
+          <tr><td>Wednesday</td><td>5:00 PM – 9:00 PM</td></tr>
+          <tr><td>Saturday</td><td>2:00 PM – 7:00 PM</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>📍 Abuja Chess Community — <a href="contact.html">Contact us</a></p>
+      <small>© <span class="year"></span> Abuja Chess Community</small>
+    </div>
+  </footer>
+
+  <!-- Join modal (hidden by default) -->
+  <div id="join-modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-labelledby="join-title">
+      <button class="modal-close" id="close-join">&times;</button>
+      <h3 id="join-title">Join Abuja Chess Community</h3>
+
+      <!-- Formspree Form -->
+      <form id="join-form" action="https://formspree.io/f/xjkabyde" method="POST">
+        <label>
+          Full name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email or phone
+          <input type="text" name="contact" required />
+        </label>
+        <label>
+          Skill level
+          <select name="level">
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+        </label>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <p class="small">
+      Your info will be sent securely via Formspree.
+      </p>
+    </div>
+  </div>
+
+
+</body>
+</html>
