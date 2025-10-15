@@ -17,6 +17,19 @@ main {
   margin:0 auto;
   padding:1rem;
 }
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hamburger {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* hidden on large screens */
+}
 .site-header{
   background:#222;
   color:#fff;
@@ -113,7 +126,8 @@ table th, table td{
 label{display:block;
   margin:.6rem 0;
 }
-input,select,textarea{width:100%;
+input,select,textarea{
+  width:100%;
   padding:.5rem;
   margin-top:.3rem;
   border:1px solid #ccc;
@@ -133,9 +147,42 @@ form{
 
 /* responsive */
 @media (max-width:640px){
-  .nav{float:none;
+  .nav{
+    float:none;
     margin-top:.6rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #222;
+    display: none;       
+    flex-direction: column;
+    align-items: center;        /*  centers horizontally */
+    padding: 1rem 0;
+    transition: all 0.3s ease;
   }
-  .brand{display:block;}
+  .nav.open{
+    display:flex;
+  }
+  .header-btn{
+    width: 200px;
+    display: block;
+  }
+  .brand{
+    display:block;
+  }
+    .nav a, 
+  .nav .btn {
+    display: block;
+    margin: 0.8rem 0;
+    color: #fff;
+  }
+  .hamburger {
+    display: block; /* visible on mobile */
+  }
+  .nav.open {
+    display: flex;
+  }
 }
+
 
