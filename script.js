@@ -1,5 +1,11 @@
 'use strict'
-// basic interactions: modal, year, simple form handling
+// basic interactions: modal, year, simple form handling, Menu toggle
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu')
+hamburger.addEventListener('click', function(){
+  const openMenu = navMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', openMenu)
+})
 document.addEventListener('DOMContentLoaded', function () {
   // populate year
   const y = new Date().getFullYear();
@@ -31,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   })
  
-  // Join form handling (simple client-side validation)
   const joinForm = document.getElementById('join-form');
   if(joinForm){
     joinForm.addEventListener('submit', function(event){
@@ -60,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // contact form stubbing
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
@@ -90,3 +94,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
