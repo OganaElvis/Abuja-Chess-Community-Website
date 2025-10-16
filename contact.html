@@ -61,9 +61,41 @@
       <small>© <span class="year"></span> Abuja Chess Community</small>
     </div>
   </footer>
+      <!-- Join modal (hidden by default) -->
+  <div id="join-modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-labelledby="join-title">
+      <button class="modal-close" id="close-join">&times;</button>
+      <h3 id="join-title">Join Abuja Chess Community</h3>
+
+      <!-- Formspree Form -->
+      <form id="join-form" action="https://formspree.io/f/xjkabyde" method="POST">
+        <label>
+          Full name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email or phone
+          <input type="text" name="contact" required />
+        </label>
+        <label>
+          Skill level
+          <select name="level">
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+        </label>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <p class="small">
+      Your info will be sent securely via Formspree.
+      </p>
+    </div>
+  </div>
 
   <script src="script.js" defer></script>
 </body>
 </html>
+
 
 
