@@ -46,7 +46,7 @@ main {
 }
 .nav{float:right;}
 .nav a, .nav .btn{
-  color:#fff;
+  color:black;
   margin-left:0.8rem;
   text-decoration:none;
 }
@@ -229,7 +229,7 @@ form{
     float:none;
     margin-top:.6rem;
     position: absolute;
-    top: 60px;
+    top: 185px;
     left: 0;
     width: 100%;
     background: #a06324;
@@ -274,6 +274,7 @@ form{
     display: flex;
   }
 }
+
 
 
 
