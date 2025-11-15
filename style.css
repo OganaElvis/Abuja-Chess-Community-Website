@@ -61,7 +61,7 @@ main {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .join{
-  padding:.7rem .8rem;
+  font-size: 1.3rem;
 }
 .btn:hover{
   background-color: #a06324;
@@ -274,6 +274,7 @@ form{
     display: flex;
   }
 }
+
 
 
 
