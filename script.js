@@ -6,6 +6,28 @@ hamburger.addEventListener('click', function(){
   const openMenu = navMenu.classList.toggle('open');
   hamburger.setAttribute('aria-expanded', openMenu)
 })
+const images = document.querySelectorAll('.gallery-container img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.querySelector('.lightbox-image');
+const closeBtn = document.querySelector('.close');
+
+images.forEach(function(img){
+  img.addEventListener('click', function(){
+    lightbox.style.display = 'flex';
+    lightboxImage.src = img.src;
+  });
+});
+
+closeBtn?.addEventListener('click', function(){
+  lightbox.style.display = 'none';
+});
+
+lightbox?.addEventListener('click', function(e){
+  if (e.target === lightbox) {
+    lightbox.style.display = 'none';
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   // populate year
   const y = new Date().getFullYear();
@@ -94,4 +116,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
 
