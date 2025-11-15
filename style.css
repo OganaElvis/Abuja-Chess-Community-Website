@@ -27,7 +27,7 @@ main {
   align-items: center;
 }
 .hamburger {
-  font-size: 2rem;
+  font-size: 3rem;
   background: none;
   border: none;
   color: black;
@@ -275,6 +275,7 @@ form{
     display: flex;
   }
 }
+
 
 
 
