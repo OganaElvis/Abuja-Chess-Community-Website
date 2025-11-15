@@ -17,21 +17,25 @@ main {
   margin:0 auto;
   padding:1rem;
 }
+.logo img{
+  height: 150px;
+  width: auto;
+}
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .hamburger {
-  font-size: 1.8rem;
+  font-size: 2rem;
   background: none;
   border: none;
-  color: #fff;
+  color: black;
   cursor: pointer;
   display: none; /* hidden on large screens */
 }
 .site-header{
-  background:#222;
+  background:#e0e0e0;
   color:#fff;
   padding:.6rem 0;
 }
@@ -47,17 +51,90 @@ main {
   text-decoration:none;
 }
 .btn{
-  background:#0070f3;
+  background:#7ba738;
   border:none;
   padding:.5rem .8rem;
   border-radius:6px;
   color:#fff;
   cursor:pointer;
   text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.hero{padding:2rem 0;}
+.join{
+  padding:.6rem .8rem;
+}
+.btn:hover{
+  background-color: #a06324;
+  transform: scale(1.05);
+}
+.hero{
+  padding:2rem;
+}
+.hero h2{
+  font-size: 2.35rem;
+  margin-bottom: 1rem;
+}
+.hero p{
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
 .hero-inner{
-  padding-top: 2rem;
+  display: flex;
+  width: 100%;    
+  height: 250px;
+  align-items: center;           
+  justify-content:center;
+  gap: 2rem;  
+}
+.gallery {
+  padding: 2rem;
+  text-align: center;
+}
+.gallery h2 {
+  margin-bottom: 1rem;
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.gallery-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gallery-container img:hover {
+  transform: scale(1.05);
+}
+.lightbox {
+  display: none;               
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
 }
 .card{
   background:#f8f8f8;
@@ -116,7 +193,8 @@ table th, table td{
   width:100%;
   position:relative;
 }
-.modal-close{position:absolute;
+.modal-close{
+  position:absolute;
   right:.4rem;
   top:.2rem;
   border:none;
@@ -154,7 +232,7 @@ form{
     top: 60px;
     left: 0;
     width: 100%;
-    background: #222;
+    background: #a06324;
     display: none;       
     flex-direction: column;
     align-items: center;        /*  centers horizontally */
@@ -163,6 +241,18 @@ form{
   }
   .nav.open{
     display:flex;
+  }
+  .hero-inner{
+    flex-direction: column;   
+    text-align: center;
+  }
+  .hero-text h2{
+    font-size: 2.25rem;
+    /* margin-bottom: 1rem; */
+  }
+  .hero-text p{
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
   }
   .header-btn{
     width: 200px;
@@ -184,5 +274,6 @@ form{
     display: flex;
   }
 }
+
 
 
