@@ -129,6 +129,31 @@ main {
   border-radius: 8px;
 }
 
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #7ba738;  
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  color: #ddd;
+}
+
 .lightbox .close {
   position: absolute;
   top: 20px;
@@ -275,6 +300,7 @@ form{
     display: flex;
   }
 }
+
 
 
 
