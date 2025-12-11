@@ -10,12 +10,40 @@ const images = document.querySelectorAll('.gallery-container img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.querySelector('.lightbox-image');
 const closeBtn = document.querySelector('.close');
+const prevBtn = document.querySelector('.lightbox-prev');
+const nextBtn = document.querySelector('.lightbox-next');
 
-images.forEach(function(img){
+let currentIndex = 0;
+images.forEach(function(img, index){
   img.addEventListener('click', function(){
+    currentIndex = index;
     lightbox.style.display = 'flex';
-    lightboxImage.src = img.src;
+    lightboxImage.src = images[currentIndex].src;
   });
+});
+
+const showImage = function(index){
+  if(index < 0){
+    currentIndex = images.length - 1;
+  } 
+  else if(index >= images.length) {
+    currentIndex = 0;
+  } 
+  else {
+    currentIndex = index;
+  }
+
+  lightboxImage.src = images[currentIndex].src;
+}
+
+nextBtn?.addEventListener('click', function(e){
+  e.stopPropagation();
+  showImage(currentIndex + 1);
+});
+
+prevBtn?.addEventListener('click', function(e){
+  e.stopPropagation();
+  showImage(currentIndex - 1);
 });
 
 closeBtn?.addEventListener('click', function(){
@@ -116,5 +144,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
 
 
