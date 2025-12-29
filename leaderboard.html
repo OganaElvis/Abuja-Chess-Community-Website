@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abuja Chess Community Leaderboard</title>
+    <meta name="description" content="Abuja Chess Community Leaderboard. Find our seasonal Champion stat." />
+    <link rel="canonical" href="https://abujachesscommunity.com/leaderboard.html" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="logo" /></a>
+            <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+                ☰
+            </button>
+            <nav class="nav" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="gallery.html">Gallery</a>
+                <button id="join-btn" class="btn header-btn">Join Us</button>
+            </nav>
+        </div>
+  </header>
+    <section class="leaderboard">
+        <h1>Leaderboard</h1>
+        <table class="leaderboard-table">
+            <caption>Season 1 Standings</caption>
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Player</th>
+                    <th scope="col">Games</th>
+                    <th scope="col">W</th>
+                    <th scope="col">L</th>
+                    <th scope="col">D</th>
+                </tr>
+            </thead>
 
+            <tbody>
+                <!-- Leader -->
+                <tr class="leader">
+                    <td data-label="#">1</td>
+                    <td data-label="Player">Sam</td>
+                    <td data-label="Games">6</td>
+                    <td data-label="W" class="wins">5</td>
+                    <td data-label="L" class="losses">1</td>
+                    <td data-label="D" class="draws">0</td>
+                </tr>
+
+                <tr>
+                    <td data-label="#">2</td>
+                    <td data-label="Player">Honcho</td>
+                    <td data-label="Games">8</td>
+                    <td data-label="W" class="wins">4</td>
+                    <td data-label="L" class="losses">4</td>
+                    <td data-label="D" class="draws">0</td>
+                </tr>
+
+                <tr>
+                    <td data-label="#">3</td>
+                    <td data-label="Player">Elvis</td>
+                    <td data-label="Games">6</td>
+                    <td data-label="W" class="wins">1</td>
+                    <td data-label="L" class="losses">5</td>
+                    <td data-label="D" class="draws">0</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+      <div id="join-modal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-labelledby="join-title">
+            <button class="modal-close" id="close-join">&times;</button>
+            <h3 id="join-title">Join Abuja Chess Community</h3>
+
+            <form id="join-form" action="https://formspree.io/f/xjkabyde" method="POST">
+                <label>
+                    Full name
+                    <input type="text" name="name" required />
+                </label>
+                <label>
+                    Email or phone
+                    <input type="text" name="contact" required />
+                </label>
+                <label>
+                    Skill level
+                    <select name="level">
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option>Advanced</option>
+                    </select>
+                </label>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+            <p class="small">
+                Your info will be sent securely via Formspree.
+            </p>
+        </div>
+  </div>
+    <script src="script.js"></script>   
+</body>
+</html>
