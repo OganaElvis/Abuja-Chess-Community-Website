@@ -10,7 +10,7 @@ body, html {
   margin: 0;
 }
 main {
-  min-height: calc(100vh - 190px); /* Adjust '200px' to your header+footer height */
+  min-height: calc(100vh - 190px); 
 }
 .container{
   max-width:1000px;
@@ -32,7 +32,7 @@ main {
   border: none;
   color: black;
   cursor: pointer;
-  display: none; /* hidden on large screens */
+  display: none; 
 }
 .site-header{
   background:#e0e0e0;
@@ -162,6 +162,84 @@ main {
   font-size: 2rem;
   cursor: pointer;
 }
+
+.leaderboard {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.leaderboard h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  table-layout: fixed; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.leaderboard-table caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+
+.leaderboard-table thead {
+  background-color: #111;
+  color: #fff;
+}
+
+.leaderboard-table th {
+  padding: 14px 10px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.leaderboard-table td {
+  padding: 12px 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-table tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
+.leaderboard-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+.leader {
+  background-color: #d4af37 !important; 
+  color: #000;
+  font-weight: bold;
+}
+
+.wins {
+  color: #2e7d32; 
+  font-weight: 600;
+}
+
+.losses {
+  color: #c62828; 
+}
+
+.draws {
+  color: #555;
+}
+
 .card{
   background:#f8f8f8;
   padding:1rem;
@@ -199,15 +277,14 @@ table th, table td{
   height:300px;
 }
 
-/* modal */
 .modal{
-  position: fixed;         /* stays on top of everything */
+  position: fixed;        
   top: 0;
   left: 0;
-  width: 100%;             /* full width */
-  height: 100%;            /* full height */
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent overlay */
-  display:none;           /* hidden by default */
+  width: 100%;            
+  height: 100%;           
+  background: rgba(0, 0, 0, 0.6); 
+  display:none;          
   align-items: center;
   justify-content: center;
 }
@@ -261,7 +338,7 @@ form{
     background: #a06324;
     display: none;       
     flex-direction: column;
-    align-items: center;        /*  centers horizontally */
+    align-items: center;      
     padding: 1rem 0;
     transition: all 0.3s ease;
   }
@@ -294,12 +371,56 @@ form{
     color: #fff;
   }
   .hamburger {
-    display: block; /* visible on mobile */
+    display: block; 
   }
   .nav.open {
     display: flex;
   }
+  
+  .leaderboard-table,
+  .leaderboard-table thead,
+  .leaderboard-table tbody,
+  .leaderboard-table th,
+  .leaderboard-table td,
+  .leaderboard-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .leaderboard-table thead {
+    display: none;
+  }
+
+  .leaderboard-table tr {
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    padding: 10px;
+  }
+
+  .leaderboard-table td {
+    text-align: right;
+    padding: 8px 10px;
+    border: none;
+    position: relative;
+  }
+
+  .leaderboard-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #333;
+  }
+
+  .leader {
+    background-color: #d4af37;
+  }
 }
+
 
 
 
